@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/Service")
-public class registerController {
+public class RegisterController {
     @Autowired
     CustomerService customerservice;
 

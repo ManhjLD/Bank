@@ -1,18 +1,16 @@
 package com.rs.bank.service;
 
-import com.rs.bank.Repo.customerRepo;
+import com.rs.bank.Repo.CustomerRepo;
 import com.rs.bank.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CustomerService {
     @Autowired
-    customerRepo customerRepository;
+    CustomerRepo customerRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -31,8 +29,8 @@ public class CustomerService {
         }
         return null;
     }
-    public Customer updateCustomer(Customer customer){
-        return customerRepository.save(customer);
+    public void updateCustomer(Customer customer){
+        customerRepository.save(customer);
     }
 
     public void deleteCustomer(Customer customer){

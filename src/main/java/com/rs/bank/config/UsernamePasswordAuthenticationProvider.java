@@ -1,6 +1,6 @@
 package com.rs.bank.config;
 
-import com.rs.bank.Repo.customerRepo;
+import com.rs.bank.Repo.CustomerRepo;
 import com.rs.bank.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -15,13 +15,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Component
 public class UsernamePasswordAuthenticationProvider implements AuthenticationProvider {
     @Autowired
-    private customerRepo customerrepo;
+    private CustomerRepo customerrepo;
     @Autowired
     private PasswordEncoder passwordEncoder;
 

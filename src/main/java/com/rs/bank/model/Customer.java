@@ -20,11 +20,13 @@ public class Customer {
 
     private String role;
 
+    private String name;
+
     private String email;
 
-    private String name;
+    private String birthday;
 
     private String address;
 
-    private String PIN;
+    private String pin;
 }
