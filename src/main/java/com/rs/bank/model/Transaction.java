@@ -1,20 +1,27 @@
 package com.rs.bank.model;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.time.LocalDateTime;
 
 @Data
 @Entity
+@Table(name = "transaction")
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
-    @ManyToOne
-    private Account fromAccount;
-    @ManyToOne
-    private Account toAccount;
-    private double amount;
-    private String type; // "DEPOSIT", "WITHDRAW", "TRANSFER"
-    private LocalDateTime timestamp;
+    private Integer id;
+
+    @Column(name = "from_account")
+    private String fromAccount;
+
+    @Column(name = "to_account")
+    private String toAccount;
+
+    private Integer amount;
+
+    private String type;
+
+    private String description;
+
+    private LocalDateTime time;
 }
